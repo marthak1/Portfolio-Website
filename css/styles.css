@@ -156,7 +156,114 @@
  /* Hero Section */
  .hero {
      min-height: 100vh;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 50%, var(--color-navy-lightest) 100%);
+
  }
+ .hero-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(100, 255, 218, 0.05);
+    backdrop-filter: blur(60px);
+    animation: float 6s ease-in-out infinite;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.circle-1 {
+    width: 24rem;
+    height: 24rem;
+    top: -6rem;
+    right: -3rem;
+}
+
+.circle-2 {
+    width: 20rem;
+    height: 20rem;
+    bottom: -5rem;
+    left: -4rem;
+    animation-delay: 2s;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 56rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-green);
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.gradient-text {
+    display: block;
+    margin-top: 0.5rem;
+    background: linear-gradient(to right, var(--color-green), var(--color-slate-light), var(--color-white));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-slate);
+    max-width: 42rem;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--color-green);
+    border-radius: 1.25rem;
+    opacity: 0.7;
+}
+
+.scroll-indicator-inner {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.25rem;
+    height: 0.5rem;
+    background: var(--color-green);
+    border-radius: 0.125rem;
+    animation: float 2s ease-in-out infinite;
+}
 
  /* About Section */
  .about {
@@ -195,6 +302,7 @@
 
  /* Mobile: < 768px */
  @media (max-width: 768px) {
+    
      .container {
          padding: 0 24px;
      }
