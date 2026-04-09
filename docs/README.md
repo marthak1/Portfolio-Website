@@ -46,6 +46,10 @@ A modern, professional developer portfolio built with pure vanilla JavaScript, d
 - Page load time < 2 seconds
 - 90+ Lighthouse score
 - Mobile-friendly (100% responsive)
+- Deployment : Portfolio- Creative Developer & Designer
+https://martha-ogunbiyi.netlify.app/
+
+
 - 95%+ test coverage
 - SEO optimized (appears in search results)
 - Form conversion rate > 5%
